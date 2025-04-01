@@ -264,11 +264,26 @@ function validateTotalDD(dives) {
 }
 
 function getDiveList() {
-    return Array.from(document.querySelectorAll('.dive-row')).map(row => ({
-        number: parseInt(row.querySelector('input[type="number"]').value),
-        position: row.querySelector('select').value,
-        type: row.querySelector('input[type="radio"]:checked').value
-    }));
+    const isSixDive = document.getElementById('sixDive').checked;
+    const formId = isSixDive ? 'sixDiveForm' : 'elevenDiveForm';
+    const maxDives = isSixDive ? 6 : 11;
+    const dives = [];
+
+    for (let i = 1; i <= maxDives; i++) {
+        const diveInput = document.querySelector(`#${formId} input[type="number"][data-dive="${i}"]`);
+        const positionSelect = document.querySelector(`#${formId} select[data-dive="${i}"]`);
+        const typeRadio = document.querySelector(`#${formId} input[type="radio"][name="diveType${i}"]:checked`);
+
+        if (diveInput?.value && positionSelect?.value) {
+            dives.push({
+                number: parseInt(diveInput.value),
+                position: positionSelect.value,
+                type: typeRadio ? typeRadio.value : 'optional' // default to optional for 6-dive meet
+            });
+        }
+    }
+
+    return dives;
 }
 
 function displayErrors(errors) {
