@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dive Sheet Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h1>Dive Sheet Generator</h1>
+    <!-- Diver Information Section -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Diver Name</label>
+            <input type="text" class="form-control" id="diverName" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">School</label>
+            <input type="text" class="form-control" id="school" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Meet Title</label>
+            <input type="text" class="form-control" id="meetTitle" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Meet Date</label>
+            <input type="date" class="form-control" id="meetDate" required>
+        </div>
+    </div>
+    <!-- Radio buttons section -->
+    <div class="mb-4">
+        <h3>Select Meet Type:</h3>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="diveCount" id="sixDive" value="6" checked>
+            <label class="form-check-label" for="sixDive">6 Dive Meet</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="diveCount" id="elevenDive" value="11">
+            <label class="form-check-label" for="elevenDive">11 Dive Meet</label>
+        </div>
+    </div>
+
+    <!-- 6 Dive Form -->
+    <div id="sixDiveForm" class="dive-form">
+        <h3>6 Dive Form</h3>
+        <form>
+            <!-- Repeat for dives 1-6 -->
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 1:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="1" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="1">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 2:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="2" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="2">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 3:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="3" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="3">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 4:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="4" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="4">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 5:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="5" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="5">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 6:</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" data-dive="6" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select" data-dive="6">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 11 Dive Form -->
+    <div id="elevenDiveForm" class="dive-form" style="display: none;">
+        <h3>11 Dive Form</h3>
+        <form>
+            <!-- Example of one dive row - repeat 11 times -->
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 1:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 2:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 3:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 4:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 5:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 6:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 7:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 8:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 9:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 10:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-2">
+                <div class="col-auto">
+                    <label class="col-form-label">Dive 11:</label>
+                </div>
+                <div class="col-2">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="voluntary1" value="voluntary" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="voluntary1">V</label>
+                        <input type="radio" class="btn-check dive-type" name="diveType1" id="optional1" value="optional" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="optional1">O</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Dive Number">
+                </div>
+                <div class="col-4">
+                    <select class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="A">A - Straight</option>
+                        <option value="B">B - Pike</option>
+                        <option value="C">C - Tuck</option>
+                        <option value="D">D - Free</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button class="btn btn-primary mt-3">Generate Dive Sheet</button>
+
+    <!-- Add error display div -->
+    <div id="validation-errors" class="mt-3"></div>
+
+    <script src="./src/script.js">  
+    </script>
+</body>
+</html>

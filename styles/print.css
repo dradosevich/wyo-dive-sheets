@@ -1,0 +1,26 @@
+@media print {
+    .dive-sheet {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    th:last-child, td:last-child {
+        border-left: 2px solid black;
+    }
+    
+    .sheet-header {
+        margin-bottom: 20px;
+    }
+}
